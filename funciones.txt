@@ -1,0 +1,40 @@
+[['def Expr():\n {Stat ("")}"."', '.'], ['def Stat ():\n \nint value', 'Expression(  value)\nSystem.Console.WriteLn(value.ToString())', '.'], ['def Expression( result):\n \nint result1,result2', 'Term(  result1)', '{    "+"Term(  result2)\nresult1+=result2', '   | "-"Term(  result2)\nresult1-=result2', '}\nresult=result1', '.'], ['def Term( result):\n\nint result1,result2', 'Factor( result1)', '{    "*"Factor( result2)\nresult1*=result2', '   | "/"Factor( result2)\nresult1/=result2', '}\nresult=result1', '.'], ['', 'def Factor( result):\n \nint signo', '["-"\nsigno = -1]', '( Number( result) | "("Expression(  result)")") \nresult*=signo', '.'], ['', 'def Number( result):\n   number \n result ', '.']]
+def Expr():
+ {Stat ("")}"."
+def Stat ():
+ 
+int value
+Expression(  value)
+System.Console.WriteLn(value.ToString())
+def Expression( result):
+ 
+int result1,result2
+Term(  result1)
+{    "+"Term(  result2)
+result1+=result2
+   | "-"Term(  result2)
+result1-=result2
+}
+result=result1
+def Term( result):
+
+int result1,result2
+Factor( result1)
+{    "*"Factor( result2)
+result1*=result2
+   | "/"Factor( result2)
+result1/=result2
+}
+result=result1
+
+def Factor( result):
+ 
+int signo
+["-"
+signo = -1]
+( Number( result) | "("Expression(  result)")") 
+result*=signo
+
+def Number( result):
+   number 
+ result 
